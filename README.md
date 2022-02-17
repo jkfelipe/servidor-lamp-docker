@@ -4,17 +4,17 @@ servidor_LAMP
 Servidor web com volumes persistentes, arquivos no diretório "www" são acessados pelo endereço "http://localhost".
 
 Versões:
-    - Apache: 2.4.38 (Debian)
-    - PHP: 7.2.34
-    - PHPMyAdmin: 5.1.1
-    - MariaDB: 10.7.1
-    - Postgress: 14
+- Apache: 2.4.38 (Debian)
+- PHP: 7.2.34
+- PHPMyAdmin: 5.1.1
+- MariaDB: 10.7.1
+- Postgress: 14
 
 Portas encaminhadas:
-    - Apache: 80/tcp, 443/tcp
-    - PHPMyAdmin: 8080/tcp
-    - MariaDB: 3306/tcp
-    - Postgres: 5432/tcp
+- Apache: 80/tcp, 443/tcp
+- PHPMyAdmin: 8080/tcp
+- MariaDB: 3306/tcp
+- Postgres: 5432/tcp
 
 ## QuickStart
 
