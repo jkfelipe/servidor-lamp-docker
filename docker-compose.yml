@@ -1,0 +1,48 @@
+version: '3.1'
+
+services:
+
+  apache:
+    build: .
+    restart: always
+    container_name: apache
+    ports: 
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./www:/var/www/html
+    links:
+      - db 
+
+  db:
+    image: mariadb:10.7.1
+    restart: always
+    container_name: mariadb
+    ports:
+      - 3306:3306
+    volumes:
+      - ./data:/var/lib/mysql
+    environment:
+      MARIADB_ROOT_PASSWORD: mariadb
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    container_name: phpmyadmin
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
+      - MYSQL_ROOT_PASSWORD=mariadb
+      - PMA_HOST=db
+  
+  postgres:
+    image: postgres:14
+    restart: always
+    container_name: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
