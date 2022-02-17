@@ -1,4 +1,4 @@
-servidor_LAMP
+servidor-lamp-docker
 ============================
 
 Servidor web com volumes persistentes, arquivos no diretório "www" são acessados pelo endereço "http://localhost".
